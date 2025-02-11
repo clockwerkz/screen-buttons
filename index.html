@@ -7,6 +7,46 @@
   <link href="src/style.css" rel="stylesheet"/>
 </head>
 <body>
-  <h1>Website</h1>
+  <div id="main">
+    <div class="button-container">
+      <button class="color-button white-overlay" onclick="showOverlay('white')" />
+      <button class="color-button red-overlay" onclick="showOverlay('#FF0000')" />
+      <button class="color-button green-overlay" onclick="showOverlay('#00FF00')" />
+      <button class="color-button blue-overlay" onclick="showOverlay('#0000FF')" />
+      <button class="color-button yellow-overlay" onclick="showOverlay('#ffd100')" />
+    </div>
+  </div>
+  <div id="screen-overlay" class="overlay" />
+  <script type="text/javascript">
+    function showOverlay(color) {
+      const overlay = document.getElementById('screen-overlay');
+      overlay.style.backgroundColor = color;
+      overlay.style.display = 'block';
+    
+      // Request fullscreen
+      const elem = document.documentElement;
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+        elem.webkitRequestFullscreen();
+      } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+      }
+    
+      // Add event listener for exit fullscreen
+      document.addEventListener('fullscreenchange', exitFullscreenHandler);
+    }
+    
+    function exitFullscreenHandler() {
+      if (!document.fullscreenElement) { 
+        const overlay = document.getElementById('screen-overlay');
+        overlay.style.display = 'none';
+        document.removeEventListener('fullscreenchange', exitFullscreenHandler); 
+      }
+    }
+    </script>
+  <script type="module" src="src/main.js" type="text/javascript"></script>
 </body>
 </html>
