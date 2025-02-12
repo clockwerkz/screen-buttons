@@ -8,12 +8,15 @@
 </head>
 <body>
   <div id="main">
-    <div class="button-container">
-      <button class="color-button white-overlay" onclick="showOverlay('white')" />
-      <button class="color-button red-overlay" onclick="showOverlay('#FF0000')" />
-      <button class="color-button green-overlay" onclick="showOverlay('#00FF00')" />
-      <button class="color-button blue-overlay" onclick="showOverlay('#0000FF')" />
-      <button class="color-button yellow-overlay" onclick="showOverlay('#ffd100')" />
+    <div class="flex justify-between p-4 bg-blue-200">
+      <h1>BucketFill.com</h1>
+    </div>
+    <div id="button-container" class="flex justify-center">
+      <button class="color-button white-overlay rounded-md" onclick="showOverlay('white')" />
+      <button class="color-button red-overlay rounded-md" onclick="showOverlay('#FF0000')" />
+      <button class="color-button green-overlay rounded-md" onclick="showOverlay('#00FF00')" />
+      <button class="color-button blue-overlay rounded-md" onclick="showOverlay('#0000FF')" />
+      <button class="color-button yellow-overlay rounded-md" onclick="showOverlay('#ffd100')" />
     </div>
   </div>
   <div id="screen-overlay" class="overlay" />
