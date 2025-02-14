@@ -12,12 +12,27 @@
   overflow: hidden;
 }
 
+.color-monitor {
+  @apply relative border-1 border-gray-200 rounded-md p-1.5 text-center m-2 cursor-pointer bg-white shadow-2xl;
+  @apply focus:outline-none focus-visible:ring-2 hover:opacity-60 ring-blue-400 ring-offset-1;
+}
+
+.color-monitor::after {
+  content: '';
+  @apply absolute h-1 w-1 bg-red-200 bottom-0.5 right-2 block;
+}
+
 .color-button {
-  @apply w-[100px] h-[100px] rounded-md cursor-pointer m-2 border-2 ring-blue-400 ring-offset-1 focus:outline-none focus-visible:ring-2;
+  @apply w-[100px] h-[60px] rounded-md border-2 border-gray-100 cursor-pointer;
+  
 }
 
 .white-overlay {
-  background-color: white;
+  background-color: #FAFAFA;
+}
+
+.black-overlay {
+  background-color: #000;
 }
 
 .red-overlay {

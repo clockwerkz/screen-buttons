@@ -5,20 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Screen Buttons</title>
   <link href="src/style.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-  <div id="main">
-    <div class="flex justify-between p-4">
-      <h2 class="text-2xl">BucketFill.com</h2>
+  <nav class="flex px-8 py-4">
+    <i class="fa-solid fa-fill text-4xl text-blue-600"></i> <h2 class="text-2xl">BucketFill.com</h2>
+  </nav>
+  <section id="hero" class="bg-gray-200 py-8">
+    <h1 class="text-center text-6xl font-normal">Fill Your Screen! <i class="fa-solid fa-arrow-up-right-from-square"></i></h1>
+    <h3 class="text-center text-2xl font-light mt-2 mb-6">Click on a Color to go full screen. Press ESC to exit. </h3>
+    <div id="button-container" class="flex justify-center flex-wrap">
+      <div class="color-monitor">
+        <button class="color-button white-overlay rounded-md" onclick="showOverlay('white')" />
+        <p class="m-0 text-gray-600">white</p>
+      </div>
+      <div class="color-monitor">
+        <button class="color-button black-overlay rounded-md" onclick="showOverlay('black')" />
+        <p class="m-0 text-gray-100">black</p>
+      </div>
+        <div class="color-monitor">
+        <button class="color-button red-overlay rounded-md" onclick="showOverlay('#FF0000')" />
+      <p class="m-0 text-red-100">red</p>
+        </div>
+      <div class="color-monitor">
+        <button class="color-button green-overlay rounded-md" onclick="showOverlay('#00FF00')" />
+        <p class="m-0 text-green-900">green</p>
+      </div>
+      <div class="color-monitor">
+        <button class="color-button blue-overlay rounded-md" onclick="showOverlay('#0000FF')" />
+        <p class="m-0 text-blue-100">blue</p>
+      </div>
+      <div class="color-monitor">
+        <button class="color-button yellow-overlay rounded-md" onclick="showOverlay('#ffd100')" />
+        <p class="m-0 text-yellow-900">yellow</p>
+      </div>
     </div>
-    <div id="button-container" class="flex justify-center">
-      <button class="color-button white-overlay rounded-md" onclick="showOverlay('white')" />
-      <button class="color-button red-overlay rounded-md" onclick="showOverlay('#FF0000')" />
-      <button class="color-button green-overlay rounded-md" onclick="showOverlay('#00FF00')" />
-      <button class="color-button blue-overlay rounded-md" onclick="showOverlay('#0000FF')" />
-      <button class="color-button yellow-overlay rounded-md" onclick="showOverlay('#ffd100')" />
+  </section>
+  <section id="uses" class="mt-8">
+    <h2 class="text-3xl text-center mb-8">Common Uses for Screen Fill</h2>
+    <div class="flex md:flex-row flex-col px-8 justify-between
+    ">
+      <div class="rounded-md shadow-md text-center p-8 md:mx-4 my-2 sm:my-0">
+        <i class="fa-solid fa-desktop text-5xl"></i>
+        <h3 class="text-2xl my-4">Screen Cleaning and Maintenance</h3>
+        <uL class="text-gray-600">
+          <li class="mb-2">White screen for dirt removal</li>
+          <li class="mb-2">Black screen for dust detection</li>
+          <li class="mb-2">Red, green, and blue for dead/stuck pixel testing</li>
+        </uL>
+      </div> 
+      <div class="rounded-md shadow-md text-center p-8 sm:mx-4 my-2 sm:my-0">
+        <i class="fa-solid fa-desktop text-5xl"></i>
+        <h3 class="text-2xl my-4">Mobile Sceens</h3>
+        <uL class="text-gray-600">
+          <li class="mb-2">Useful for applying screen protectors to remove bubbles</li>
+        </uL>
+      </div> 
+      <div class="rounded-md shadow-md text-center p-8 sm:mx-4 my-2 sm:my-0">
+        <i class="fa-solid fa-desktop text-5xl"></i>
+        <h3 class="text-2xl my-4">Troubleshooting</h3>
+        <div class="w-[150px] h-4 bg-gray-300 mx-auto flex">
+          <div class="w-[50px] bg-[#FF0000] h-full"></div>
+          <div class="w-[50px] bg-[#00FF00] h-full"></div>
+          <div class="w-[50px] bg-[#0000FF] h-full"></div>
+        </div>
+        <uL class="text-gray-600">
+          <li class="mb-2">Dead/Stuck pixels</li>
+          <li class="mb-2">Black screen for dust detection</li>
+          <li class="mb-2">Red, green, and blue for dead/stuck pixel testing</li>
+        </uL>
+      </div> 
     </div>
-  </div>
+  </section>
   <div id="screen-overlay" class="overlay" />
   <script type="text/javascript">
     function showOverlay(color) {
