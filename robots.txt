@@ -1,0 +1,16 @@
+User-agent: *
+Disallow: /private/
+Disallow: /temp/
+Disallow: /admin/
+Disallow: /cgi-bin/
+
+# Specific files or file types
+Disallow: /*.log$
+Disallow: /old-page.html
+
+# Allow access to specific directories or files
+Allow: /public/
+Allow: /images/
+
+# Crawl-delay (use with caution, not all bots respect it)
+Crawl-delay: 10

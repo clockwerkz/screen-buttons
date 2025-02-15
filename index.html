@@ -3,16 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Screen Buttons</title>
+  <meta name="robots" content="index,follow,noodp">
+  <meta name="description" content="Use a white screen to clean a display from dust and dirt. White screen is also useful for projection mapping displays. Use the red, green and blue colors to troubleshoot dead pixels. Other color screens provided are useful for film and social media productions.">
+  <title>Fill Your Screen</title>
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link href="src/style.css" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-  <nav class="flex px-8 py-4">
-    <i class="fa-solid fa-fill text-4xl text-blue-600"></i> <h2 class="text-2xl">BucketFill.com</h2>
+  <nav class="flex align-middle px-8 py-4">
+    <div class="h-12 w-12 bg-blue-400 rounded-full text-center">
+      <i class="fa-solid fa-fill text-4xl text-blue-50 relative top-1.5"></i>
+    </div>
+    <p class="text-2xl ml-2 mt-1.5">FillYourScreen.com</p>
   </nav>
   <section id="hero" class="bg-gray-200 py-8">
     <h1 class="text-center text-6xl font-normal">Fill Your Screen! <i class="fa-solid fa-arrow-up-right-from-square"></i></h1>
-    <h3 class="text-center text-2xl font-light mt-2 mb-6">Click on a Color to go full screen. Press ESC to exit. </h3>
+    <h2 class="text-center text-2xl font-light mt-2 mb-6">Click on a Color to go full screen. Press ESC to exit. </h3>
     <div id="button-container" class="flex justify-center flex-wrap">
       <div class="color-monitor">
         <button class="color-button white-overlay rounded-md" onclick="showOverlay('white')" />
@@ -40,40 +46,60 @@
       </div>
     </div>
   </section>
-  <section id="uses" class="mt-8">
-    <h2 class="text-3xl text-center mb-8">Common Uses for Screen Fill</h2>
-    <div class="flex md:flex-row flex-col px-8 justify-between
+  <section id="common-uses" class="mt-16 px-8">
+    <h2 class="text-3xl mb-8">Common Uses for Screen Fill</h2>
+    <div class="flex md:flex-row flex-col justify-between
     ">
-      <div class="rounded-md shadow-md text-center p-8 md:mx-4 my-2 sm:my-0">
+      <div class="rounded-md shadow-md text-center p-8 md:mx-4 my-4 md:my-0 flex-1">
         <i class="fa-solid fa-desktop text-5xl"></i>
         <h3 class="text-2xl my-4">Screen Cleaning and Maintenance</h3>
         <uL class="text-gray-600">
           <li class="mb-2">White screen for dirt removal</li>
           <li class="mb-2">Black screen for dust detection</li>
-          <li class="mb-2">Red, green, and blue for dead/stuck pixel testing</li>
         </uL>
       </div> 
-      <div class="rounded-md shadow-md text-center p-8 sm:mx-4 my-2 sm:my-0">
-        <i class="fa-solid fa-desktop text-5xl"></i>
+      <div class="rounded-md shadow-md text-center p-8 md:mx-4 my-4 md:my-0 flex-1">
+        <i class="fa-solid fa-mobile-screen text-5xl"></i>
         <h3 class="text-2xl my-4">Mobile Sceens</h3>
         <uL class="text-gray-600">
           <li class="mb-2">Useful for applying screen protectors to remove bubbles</li>
         </uL>
       </div> 
-      <div class="rounded-md shadow-md text-center p-8 sm:mx-4 my-2 sm:my-0">
-        <i class="fa-solid fa-desktop text-5xl"></i>
+      <div class="rounded-md shadow-md text-center p-8 md:mx-4 my-4 md:my-0 flex-1">
+        <i class="fa-solid fa-screwdriver-wrench text-5xl"></i>
         <h3 class="text-2xl my-4">Troubleshooting</h3>
-        <div class="w-[150px] h-4 bg-gray-300 mx-auto flex">
+        <div class="w-[150px] h-4 bg-gray-300 mx-auto flex mb-2">
           <div class="w-[50px] bg-[#FF0000] h-full"></div>
           <div class="w-[50px] bg-[#00FF00] h-full"></div>
           <div class="w-[50px] bg-[#0000FF] h-full"></div>
         </div>
         <uL class="text-gray-600">
-          <li class="mb-2">Dead/Stuck pixels</li>
-          <li class="mb-2">Black screen for dust detection</li>
           <li class="mb-2">Red, green, and blue for dead/stuck pixel testing</li>
         </uL>
       </div> 
+    </div>
+  </section>
+  <section id="other-uses" class="mt-16 px-8">
+    <h2 class="text-3xl mb-8">Other Uses</h2>
+    <div>
+      <div class="flex md:flex-row flex-col">
+        <image src="images/ProjectionMapping.jpeg" class="h-100 w-100 md:mx-0 mx-auto" alt="A rendered night time image of a house with a holiday display of snowflakes and peppermint projected on the front of the house."/>
+        <div class="md:pl-8 p-0">
+          <h3 class="text-2xl md:text-left text-center mt-4 md:mt-0">Projection Mapping</h3>
+          <p class="mt-2 text-lg/6">Projection mapping is revolutionizing the way we experience interior and exterior spaces, transforming ordinary surfaces into dynamic, immersive displays. By using high-powered projectors and specialized software, projection mapping can turn walls, ceilings, buildings, and even objects into vibrant, interactive visuals. Whether for artistic installations, live events, or commercial branding, this technology allows for stunning visual effects that seamlessly integrate with the physical environment.</p>
+          <p class="mt-2 text-lg/6">Setting up a projection mapping display typically begins with a crucial first step—projecting a solid white light onto the surface. This process, known as "feature mapping," helps define the contours, edges, and unique characteristics of the space, allowing the software to precisely align the projected visuals. Once the mapping is complete, digital content can be overlaid with perfect accuracy, ensuring a seamless blend of light and architecture. Whether indoors or outdoors, this technique enables breathtaking displays that captivate audiences and enhance storytelling in ways traditional screens simply can't achieve.</p>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8">
+      <div class="flex md:flex-row flex-col">
+        <image src="images/LightingEffects.jpeg" class="h-100 w-100" alt="rendered image of a film studio with various types of floodlights and colors, and prominently displayed in the middle is a monitor with a color wheel on the display."/>
+        <div class="md:pl-8 p-0">
+          <h3 class="text-2xl">Lighting for Film and Social Media</h3>
+          <p class="mt-2 text-lg/6">Fill lighting is an essential component in film and social media production, used to balance shadows and enhance the subject’s visibility. Unlike key lighting, which provides the primary illumination, fill lighting softens harsh contrasts and ensures a more even, natural look. This technique is crucial in interviews, vlogs, and cinematic scenes where proper lighting creates a polished, professional aesthetic. In social media content, where creators often work with minimal equipment, finding an accessible and effective fill light source can be a challenge.</p>
+          <p class="mt-2 text-lg/6">Websites like <span class="font-bold">fillyourscreen.com</span> offer a simple yet effective solution by turning any monitor or handheld device into a solid-color light source. By displaying a bright white or softly colored screen, users can create instant fill lighting without expensive gear. This approach is particularly useful for mobile creators, streamers, or anyone needing quick, adjustable lighting for their setup. Whether brightening a face during a livestream or adding a subtle glow for a photoshoot, an on-screen light tool provides an easy way to enhance video and photo quality with minimal effort.</p>
+        </div>
+      </div>
     </div>
   </section>
   <div id="screen-overlay" class="overlay" />
@@ -82,6 +108,8 @@
       const overlay = document.getElementById('screen-overlay');
       overlay.style.backgroundColor = color;
       overlay.style.display = 'block';
+      document.documentElement.style.overflow = 'hidden';
+      document.body.scroll = "no";
     
       // Request fullscreen
       const elem = document.documentElement;
@@ -103,6 +131,8 @@
       if (!document.fullscreenElement) { 
         const overlay = document.getElementById('screen-overlay');
         overlay.style.display = 'none';
+        document.documentElement.style.overflow = 'scroll';
+        document.body.scroll = "yes";
         document.removeEventListener('fullscreenchange', exitFullscreenHandler); 
       }
     }
