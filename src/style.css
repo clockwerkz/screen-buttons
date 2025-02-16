@@ -75,6 +75,13 @@ nav {
   }
 }
 
+.hero-text {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 300;
+  margin-bottom: 0;
+}
+
 .hero > h1 > i {
   @media screen and (max-width: 768px) {
     display: none;
@@ -108,6 +115,18 @@ nav {
 }
 .btn-text-yellow {
   color: #78350f;
+}
+
+.btn-text-lt-green {
+  color: #f5fff5;
+}
+
+.btn-text-orange {
+  color: #fddeae;
+}
+
+.btn-text-pink {
+  color: #520036;
 }
 
 .rgb-bar {
@@ -310,9 +329,22 @@ footer {
   background-color: #00FF00;
 }
 
+.warm-green-overlay {
+  background-color: #517e51;
+}
+
 .yellow-overlay {
   background-color: #ffd100;
 }
+
+.orange-overlay {
+  background-color: #ff9100;
+}
+
+.pink-overlay {
+  background-color: #ff8fc3;
+}
+
 
 .blue-overlay {
   background-color: #0000FF;
